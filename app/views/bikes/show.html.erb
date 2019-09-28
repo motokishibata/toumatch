@@ -1,0 +1,17 @@
+<p>
+  <strong>Maker:</strong>
+  <%= @bike.maker %>
+</p>
+<p>
+  <strong>MachineName:</strong>
+  <%= @bike.machine_name %>
+</p>
+
+<h2>パーツだぞー</h2>
+<%= render @bike.parts %>
+
+<h2>Add a parts:</h2>
+<%= render "parts/form" %>
+
+<%= link_to 'Back', bikes_path %>
+| <%= link_to 'Edit', edit_bike_path(@bike)%>

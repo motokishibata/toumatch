@@ -1,0 +1,9 @@
+<%= form_with(model: [ @bike, @bike.parts.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :parts_name %><br>
+    <%= form.text_field :parts_name %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,21 @@
+<h1>バイク達だっ！</h1>
+<%= link_to 'My Bike', controller: 'bikes' %>
+<%= link_to 'New Bike', new_bike_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @bike.each do |bike| %>
+    <tr>
+      <td><%= bike.maker %></td>
+      <td><%= bike.machine_name %></td>
+      <td><%= link_to 'Show', bike_path(bike) %></td>
+      <td><%= link_to 'Edit', edit_bike_path(bike) %></td>
+      <td><%= link_to 'Destroy', bike_path(bike),
+        method: :delete, data: { confirm: 'Are you sure?'} %></td>
+    </tr>
+  <% end %>
+</table>

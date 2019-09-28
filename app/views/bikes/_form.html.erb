@@ -1,0 +1,25 @@
+<%= form_with model: @bike, local: true do |form| %>
+    <% if @bike.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(@bike.errors.count, "error")%>
+    prohibited
+    this article from being saved:</h2>
+    <ul>
+    <% @bike.errors.full_messages.each do |msg| %>
+      <li><%= msg%></li>
+    <% end %>
+    </ul>
+    <% end %>
+    <p>
+      <%= form.label :maker %><br>
+      <%= form.text_field :maker %>
+    </p>
+    <p>
+      <%= form.label :machine_name %><br>
+      <%= form.text_area :machine_name %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+<% end %>

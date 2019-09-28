@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parts_name: MyString
+  bike: one
+
+two:
+  parts_name: MyString
+  bike: two
